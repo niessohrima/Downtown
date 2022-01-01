@@ -43,12 +43,15 @@ public abstract class Character : MonoBehaviour
 
     protected virtual void Work()
     {
-        if(isCollision == false)
+        if(isCollision == false){
             WayPoint();
-        else
+        }else{
             Timer();
-        if(timeWork < 0 && isCollision == true)
+		}
+		
+        if(timeWork < 0 && isCollision == true){
             MakeMony();
+		}
     }
 
     protected virtual void OnCollisionEnter(Collision other)
